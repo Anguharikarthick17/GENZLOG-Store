@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GENZLOG Store — Shop The Next.</title>
+  <meta name="description" content="GENZLOG Store — A premium digital destination for technology, fashion and everyday essentials. Shop The Next.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preload" as="image" href="assets/images/prod_laptop.jpg">
+  <link rel="preload" as="image" href="assets/images/prod_earbuds.jpg">
+  <link rel="preload" as="image" href="assets/images/prod_smartwatch.jpg">
+</head>
+<body>
+
+<!-- ── Navigation ── -->
+<header>
+  <nav class="nav" id="nav" aria-label="Main navigation">
+    <div class="container nav__inner">
+
+      <!-- Left: Brand -->
+      <div class="nav__brand">
+        <a href="#" class="nav__wordmark" aria-label="GENZLOG Store — Home">GENZLOG</a>
+      </div>
+
+      <!-- Centre: Links -->
+      <nav class="nav__links" aria-label="Product categories">
+        <button class="nav__link" data-nav="discover" aria-label="Discover all products">Discover</button>
+        <button class="nav__link" data-nav="electronics" aria-label="Electronics category">Electronics</button>
+        <button class="nav__link" data-nav="fashion" aria-label="Fashion category">Fashion</button>
+        <button class="nav__link" data-nav="accessories" aria-label="Accessories category">Accessories</button>
+      </nav>
+
+      <!-- Right: Actions -->
+      <div class="nav__actions">
+        <!-- Search -->
+        <div class="nav__search-wrap" id="navSearchWrap">
+          <button class="nav__action-btn" id="searchToggleBtn" aria-label="Toggle search" aria-expanded="false" aria-controls="navSearchInput">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          </button>
+          <input class="nav__search-input" id="navSearchInput" type="search" placeholder="Search products…" aria-label="Search products" role="searchbox" autocomplete="off">
+          <button class="nav__search-clear" id="navSearchClear" aria-label="Clear search">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Wishlist -->
+        <button class="nav__action-btn" id="wishlistToggleBtn" aria-label="Wishlist (0 items)" aria-haspopup="dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="nav__badge" id="wishlistBadge" aria-hidden="true" style="display:none">0</span>
+        </button>
+
+        <!-- Cart -->
+        <button class="nav__action-btn" id="cartToggleBtn" aria-label="Shopping bag (0 items)" aria-haspopup="dialog">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="nav__badge" id="cartBadge" aria-hidden="true" style="display:none">0</span>
+        </button>
+
+        <!-- Mobile toggle -->
+        <button class="nav__mobile-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile-menu" id="mobileMenu" role="dialog" aria-label="Mobile navigation">
+    <button class="nav__mobile-link" data-nav="discover">Discover</button>
+    <button class="nav__mobile-link" data-nav="electronics">Electronics</button>
+    <button class="nav__mobile-link" data-nav="fashion">Fashion</button>
+    <button class="nav__mobile-link" data-nav="accessories">Accessories</button>
+  </div>
+</header>
+
+<!-- ── Page Content ── -->
+<main class="page-content">
+
+  <!-- Main View (Hero + Collection + etc) -->
+  <div id="mainView">
+
+    <!-- ── Hero ── -->
+    <section class="hero container" aria-labelledby="heroHeading">
+      <div class="hero__content">
+        <div class="hero__eyebrow">
+          <div class="hero__eyebrow-line" aria-hidden="true"></div>
+          <span class="hero__label">GENZLOG / DIGITAL COMMERCE</span>
+        </div>
+
+        <h1 class="hero__headline" id="heroHeading">
+          SHOP<br><em>THE</em><br>NEXT.
+        </h1>
+
+        <p class="hero__desc">
+          Discover thoughtfully selected technology, everyday essentials and contemporary style — all in one refined digital destination.
+        </p>
+
+        <div class="hero__ctas">
+          <button class="btn btn--primary btn--lg" id="heroExploreCta">EXPLORE COLLECTION</button>
+          <button class="btn btn--ghost btn--lg" id="heroEditionCta">DISCOVER THE EDITION</button>
+        </div>
+
+        <div class="hero__meta" aria-label="Store statistics">
+          <div class="hero__meta-item">
+            <span class="hero__meta-value">15+</span>
+            <span class="hero__meta-label">Curated Products</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-value">3</span>
+            <span class="hero__meta-label">Categories</span>
+          </div>
+          <div class="hero__meta-item">
+            <span class="hero__meta-value">01</span>
+            <span class="hero__meta-label">Edition</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__slideshow" id="heroSlideshow" aria-label="Featured products slideshow" role="region" aria-roledescription="carousel">
+          <div class="hero__slides-track" id="heroSlidesTrack">
+
+            <!-- Slide 1: Laptop (p003) -->
+            <div class="hero__slide active" data-slide-index="0" data-product-id="p003" role="tabpanel" aria-label="1 of 5: Slate 14 Ultra Laptop">
+              <div class="hero__slide-img-wrap">
+                <img src="assets/images/prod_laptop.jpg" alt="Slate 14 Ultra Laptop" loading="eager" class="hero__slide-img" onerror="this.src='assets/images/prod_laptop.jpg'">
+                <div class="hero__tag">
+                  <span class="hero__tag-badge">ELECTRONICS</span>
+                </div>
+                <div class="hero__edition">
+                  <span class="hero__edition-label">EDITION</span>
+                  <span class="hero__edition-val">01</span>
+                </div>
+              </div>
+              <div class="hero__slide-card">
+                <div class="hero__slide-info">
+                  <span class="hero__slide-cat">Electronics</span>
+                  <h3 class="hero__slide-name">Slate 14 Ultra Laptop</h3>
+                </div>
+                <div class="hero__slide-action">
+                  <span class="hero__slide-price">₹89,999</span>
+                  <button class="btn btn--primary btn--sm hero__slide-quickview" data-quick-view="p003" aria-label="Quick view Slate 14 Ultra Laptop">QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2: Earbuds (p001) -->
+            <div class="hero__slide" data-slide-index="1" data-product-id="p001" role="tabpanel" aria-label="2 of 5: Vertex ANC Pro Earbuds" aria-hidden="true">
+              <div class="hero__slide-img-wrap">
+                <img src="assets/images/prod_earbuds.jpg" alt="Vertex ANC Pro Earbuds" loading="lazy" class="hero__slide-img" onerror="this.src='assets/images/prod_earbuds.jpg'">
+                <div class="hero__tag">
+                  <span class="hero__tag-badge">ELECTRONICS</span>
+                </div>
+                <div class="hero__edition">
+                  <span class="hero__edition-label">EDITION</span>
+                  <span class="hero__edition-val">01</span>
+                </div>
+              </div>
+              <div class="hero__slide-card">
+                <div class="hero__slide-info">
+                  <span class="hero__slide-cat">Electronics</span>
+                  <h3 class="hero__slide-name">Vertex ANC Pro Earbuds</h3>
+                </div>
+                <div class="hero__slide-action">
+                  <span class="hero__slide-price">₹7,999</span>
+                  <button class="btn btn--primary btn--sm hero__slide-quickview" data-quick-view="p001" aria-label="Quick view Vertex ANC Pro Earbuds">QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3: Smartwatch (p002) -->
+            <div class="hero__slide" data-slide-index="2" data-product-id="p002" role="tabpanel" aria-label="3 of 5: Orbit Series Smartwatch" aria-hidden="true">
+              <div class="hero__slide-img-wrap">
+                <img src="assets/images/prod_smartwatch.jpg" alt="Orbit Series Smartwatch" loading="lazy" class="hero__slide-img" onerror="this.src='assets/images/prod_smartwatch.jpg'">
+                <div class="hero__tag">
+                  <span class="hero__tag-badge">ELECTRONICS</span>
+                </div>
+                <div class="hero__edition">
+                  <span class="hero__edition-label">EDITION</span>
+                  <span class="hero__edition-val">01</span>
+                </div>
+              </div>
+              <div class="hero__slide-card">
+                <div class="hero__slide-info">
+                  <span class="hero__slide-cat">Electronics</span>
+                  <h3 class="hero__slide-name">Orbit Series Smartwatch</h3>
+                </div>
+                <div class="hero__slide-action">
+                  <span class="hero__slide-price">₹12,999</span>
+                  <button class="btn btn--primary btn--sm hero__slide-quickview" data-quick-view="p002" aria-label="Quick view Orbit Series Smartwatch">QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 4: Headphones (p006) -->
+            <div class="hero__slide" data-slide-index="3" data-product-id="p006" role="tabpanel" aria-label="4 of 5: Studio Monitor Headphones" aria-hidden="true">
+              <div class="hero__slide-img-wrap">
+                <img src="assets/images/prod_headphones.jpg" alt="Studio Monitor Headphones" loading="lazy" class="hero__slide-img" onerror="this.src='assets/images/prod_headphones.jpg'">
+                <div class="hero__tag">
+                  <span class="hero__tag-badge">ELECTRONICS</span>
+                </div>
+                <div class="hero__edition">
+                  <span class="hero__edition-label">EDITION</span>
+                  <span class="hero__edition-val">01</span>
+                </div>
+              </div>
+              <div class="hero__slide-card">
+                <div class="hero__slide-info">
+                  <span class="hero__slide-cat">Electronics</span>
+                  <h3 class="hero__slide-name">Studio Monitor Headphones</h3>
+                </div>
+                <div class="hero__slide-action">
+                  <span class="hero__slide-price">₹21,999</span>
+                  <button class="btn btn--primary btn--sm hero__slide-quickview" data-quick-view="p006" aria-label="Quick view Studio Monitor Headphones">QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 5: Keyboard (p004) -->
+            <div class="hero__slide" data-slide-index="4" data-product-id="p004" role="tabpanel" aria-label="5 of 5: Arc Mechanical Keyboard" aria-hidden="true">
+              <div class="hero__slide-img-wrap">
+                <img src="assets/images/prod_keyboard.jpg" alt="Arc Mechanical Keyboard" loading="lazy" class="hero__slide-img" onerror="this.src='assets/images/prod_keyboard.jpg'">
+                <div class="hero__tag">
+                  <span class="hero__tag-badge">ELECTRONICS</span>
+                </div>
+                <div class="hero__edition">
+                  <span class="hero__edition-label">EDITION</span>
+                  <span class="hero__edition-val">01</span>
+                </div>
+              </div>
+              <div class="hero__slide-card">
+                <div class="hero__slide-info">
+                  <span class="hero__slide-cat">Electronics</span>
+                  <h3 class="hero__slide-name">Arc Mechanical Keyboard</h3>
+                </div>
+                <div class="hero__slide-action">
+                  <span class="hero__slide-price">₹12,499</span>
+                  <button class="btn btn--primary btn--sm hero__slide-quickview" data-quick-view="p004" aria-label="Quick view Arc Mechanical Keyboard">QUICK VIEW</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Controls: Prev, Indicators, Next, Counter -->
+          <div class="hero__slideshow-controls">
+            <button class="hero__nav-btn hero__nav-btn--prev" id="heroPrevBtn" aria-label="Previous featured product">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+            </button>
+            <div class="hero__indicators" id="heroIndicators" role="tablist" aria-label="Featured slides">
+              <button class="hero__indicator active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+              <button class="hero__indicator" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+              <button class="hero__indicator" role="tab" aria-selected="false" aria-label="Slide 3"></button>
+              <button class="hero__indicator" role="tab" aria-selected="false" aria-label="Slide 4"></button>
+              <button class="hero__indicator" role="tab" aria-selected="false" aria-label="Slide 5"></button>
+            </div>
+            <button class="hero__nav-btn hero__nav-btn--next" id="heroNextBtn" aria-label="Next featured product">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+            </button>
+            <span class="hero__slide-counter" id="heroSlideCounter" aria-live="polite">01 / 05</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Collection Ticker Strip ── -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-strip__track">
+        <span class="ticker-strip__item">GENZLOG</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">NEW ARRIVALS</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">EVERYDAY ESSENTIALS</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">OBJECTS OF INTEREST</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">EDITION 01</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">DIGITAL COMMERCE</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">GENZLOG</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">NEW ARRIVALS</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">EVERYDAY ESSENTIALS</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">OBJECTS OF INTEREST</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">EDITION 01</span>
+        <span class="ticker-strip__sep">/</span>
+        <span class="ticker-strip__item">DIGITAL COMMERCE</span>
+        <span class="ticker-strip__sep">/</span>
+      </div>
+    </div>
+
+    <!-- ── Featured Categories Section ── -->
+    <section class="categories-section" id="categoriesSection" aria-labelledby="categoriesHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__top">
+            <div>
+              <p class="section-label">CATEGORIES</p>
+              <h2 class="section-title" id="categoriesHeading">Curated Disciplines.</h2>
+            </div>
+          </div>
+          <p class="section-desc">Explore by discipline — engineered personal computing, structured apparel and refined daily carry.</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Electronics -->
+          <div class="category-card" data-category-explore="electronics" role="button" tabindex="0" aria-label="Explore Electronics category">
+            <div class="category-card__img-wrap">
+              <img src="assets/images/prod_laptop.jpg" alt="Electronics discipline" loading="lazy" class="category-card__img">
+            </div>
+            <div class="category-card__body">
+              <span class="category-card__num">01 / DISCIPLINE</span>
+              <h3 class="category-card__name">Electronics</h3>
+              <p class="category-card__desc">Precision acoustic monitoring, wearable health systems and ultralight desktop computing.</p>
+              <span class="category-card__action">EXPLORE ELECTRONICS →</span>
+            </div>
+          </div>
+
+          <!-- Fashion -->
+          <div class="category-card" data-category-explore="fashion" role="button" tabindex="0" aria-label="Explore Fashion category">
+            <div class="category-card__img-wrap">
+              <img src="assets/images/prod_jacket.jpg" alt="Fashion discipline" loading="lazy" class="category-card__img">
+            </div>
+            <div class="category-card__body">
+              <span class="category-card__num">02 / DISCIPLINE</span>
+              <h3 class="category-card__name">Fashion</h3>
+              <p class="category-card__desc">Technical waterproof shells, fine merino knitwear and intentional oversized cotton silhouettes.</p>
+              <span class="category-card__action">EXPLORE FASHION →</span>
+            </div>
+          </div>
+
+          <!-- Accessories -->
+          <div class="category-card" data-category-explore="accessories" role="button" tabindex="0" aria-label="Explore Accessories category">
+            <div class="category-card__img-wrap">
+              <img src="assets/images/prod_tote_bag.jpg" alt="Accessories discipline" loading="lazy" class="category-card__img">
+            </div>
+            <div class="category-card__body">
+              <span class="category-card__num">03 / DISCIPLINE</span>
+              <h3 class="category-card__name">Accessories</h3>
+              <p class="category-card__desc">Tumbled leather structured totes, RFID shielded wallets, titanium eyewear and horween straps.</p>
+              <span class="category-card__action">EXPLORE ACCESSORIES →</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── New Arrivals Section ── -->
+    <section class="new-arrivals-section" id="newArrivalsSection" aria-labelledby="newArrivalsHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__top">
+            <div>
+              <p class="section-label">LATEST RELEASES</p>
+              <h2 class="section-title" id="newArrivalsHeading">New Arrivals.</h2>
+            </div>
+            <a href="#collection" class="btn btn--ghost btn--sm" id="viewAllNewArrivalsBtn">VIEW ALL OBJECTS</a>
+          </div>
+          <p class="section-desc">Freshly introduced additions crafted for contemporary living.</p>
+        </div>
+        <div class="product-grid" id="newArrivalsGrid" role="list" aria-label="New arrivals"></div>
+      </div>
+    </section>
+
+    <!-- ── Promotional Editorial Panel ── -->
+    <section class="editorial-section" id="editorialSection" aria-labelledby="editorialHeading">
+      <div class="container">
+        <div class="editorial-card">
+          <div class="editorial-card__content">
+            <div class="editorial-card__eyebrow">
+              <div class="editorial-card__eyebrow-line" aria-hidden="true"></div>
+              <span>GENZLOG PHILOSOPHY</span>
+            </div>
+            <h2 class="editorial-card__headline" id="editorialHeading">BUILT FOR YOUR EVERYDAY.</h2>
+            <p class="editorial-card__desc">
+              Thoughtfully selected technology, useful essentials and contemporary style — all in one place. Every piece is selected for longevity, functional utility and understated form.
+            </p>
+            <div class="editorial-card__ctas">
+              <button class="btn btn--primary btn--lg" id="editorialExploreBtn">EXPLORE COLLECTION</button>
+            </div>
+          </div>
+          <div class="editorial-card__visual">
+            <img src="assets/images/prod_headphones.jpg" alt="GENZLOG studio design showcase" loading="lazy" class="editorial-card__img">
+            <div class="editorial-card__badge">
+              <span>EDITION 01 / PERMANENT COLLECTION</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Featured Collection ── -->
+    <section class="featured-section" id="featuredSection" aria-labelledby="featuredHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__top">
+            <div>
+              <p class="section-label">CURATED ESSENTIALS</p>
+              <h2 class="section-title" id="featuredHeading">Featured Objects.</h2>
+            </div>
+          </div>
+          <p class="section-desc">Handpicked selections worth your attention.</p>
+        </div>
+        <div class="featured-grid" id="featuredGrid" role="list" aria-label="Featured products"></div>
+      </div>
+    </section>
+
+    <!-- ── Main Collection ── -->
+    <section id="collection" aria-labelledby="collectionHeading">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__top">
+            <div>
+              <p class="section-label">THE COLLECTION — EDITION 01</p>
+              <h2 class="section-title" id="collectionHeading">Objects worth<br>discovering.</h2>
+            </div>
+            <span class="section-count" id="productCount" aria-live="polite"></span>
+          </div>
+          <p class="section-desc">A curated selection of products designed for everyday life.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters" role="group" aria-label="Product filters">
+          <div class="filters__categories" role="group" aria-label="Category filter">
+            <button class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+            <button class="filter-btn" data-filter="electronics" aria-pressed="false">Electronics</button>
+            <button class="filter-btn" data-filter="fashion" aria-pressed="false">Fashion</button>
+            <button class="filter-btn" data-filter="accessories" aria-pressed="false">Accessories</button>
+          </div>
+          <div class="filters__sort">
+            <label for="sortSelect" class="sr-only">Sort products</label>
+            <select class="sort-select" id="sortSelect" aria-label="Sort products">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="name-asc">Name: A–Z</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="productGrid" role="list" aria-label="Product catalogue" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <!-- ── Recently Viewed ── -->
+    <section class="recently-viewed" id="recentlyViewedSection" aria-labelledby="recentlyViewedHeading" style="display:none">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-header__top">
+            <div>
+              <p class="section-label">DAILY OBJECTS</p>
+              <h2 class="section-title" id="recentlyViewedHeading">Recently Viewed.</h2>
+            </div>
+          </div>
+        </div>
+        <div class="recently-viewed__grid" id="recentlyViewedGrid" role="list" aria-label="Recently viewed products"></div>
+      </div>
+    </section>
+
+  </div><!-- /mainView -->
+
+  <!-- ── Checkout View ── -->
+  <div class="checkout-view" id="checkoutView" role="main" aria-labelledby="checkoutTitle">
+    <div class="container">
+      <button class="checkout-back" id="checkoutBack" aria-label="Return to store">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        Back to Store
+      </button>
+
+      <h1 class="checkout-title" id="checkoutTitle">Checkout</h1>
+
+      <div class="checkout-grid">
+        <!-- Form -->
+        <form class="checkout-form" id="checkoutForm" novalidate>
+
+          <!-- Contact -->
+          <fieldset class="form-section">
+            <legend class="form-section-title">Contact Information</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="fullName">Full Name <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" required>
+                <span class="form-error" id="fullNameError" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-row form-row--2">
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email" required>
+                <span class="form-error" id="emailError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="phone">Phone <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" required>
+                <span class="form-error" id="phoneError" role="alert"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Address -->
+          <fieldset class="form-section">
+            <legend class="form-section-title">Delivery Address</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="address">Street Address <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="address" name="address" placeholder="Flat / House No., Street" autocomplete="street-address" required>
+                <span class="form-error" id="addressError" role="alert"></span>
+              </div>
+            </div>
+            <div class="form-row form-row--3">
+              <div class="form-group">
+                <label class="form-label" for="city">City <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="city" name="city" placeholder="City" autocomplete="address-level2" required>
+                <span class="form-error" id="cityError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="state">State <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="state" name="state" placeholder="State" autocomplete="address-level1" required>
+                <span class="form-error" id="stateError" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pincode">PIN Code <span aria-hidden="true">*</span></label>
+                <input class="form-input" type="text" id="pincode" name="pincode" placeholder="400001" autocomplete="postal-code" required inputmode="numeric" maxlength="6">
+                <span class="form-error" id="pincodeError" role="alert"></span>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn--primary btn--lg btn--full" id="placeOrderBtn">
+            PLACE DEMONSTRATION ORDER
+          </button>
+
+          <p class="checkout-disclaimer">
+            This is a frontend demonstration. No payment is processed. No order is sent to any server.
+          </p>
+        </form>
+
+        <!-- Order summary -->
+        <div class="checkout-summary" aria-label="Order summary">
+          <div class="checkout-summary__header">Your Order</div>
+          <div id="checkoutItems" role="list" aria-label="Items in your order"></div>
+          <div class="order-summary" id="checkoutSummary" aria-label="Price breakdown"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Confirmation View ── -->
+  <div class="confirmation-view" id="confirmationView" aria-labelledby="confirmTitle">
+    <div class="container">
+      <div class="confirmation-icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <p class="confirmation-ref" id="confirmRef"></p>
+      <h1 class="confirmation-title" id="confirmTitle">Order Received.</h1>
+      <p class="confirmation-note">Thank you for your demonstration order. In a live store, you would receive a confirmation email and shipping updates here.</p>
+      <div class="confirmation-disclaimer" role="note">
+        <strong style="display:block;margin-bottom:8px;font-size:.625rem;letter-spacing:.15em;text-transform:uppercase;color:#A3A3A3">Demonstration Notice</strong>
+        This is a simulated frontend checkout. No actual order has been placed, no payment has been charged, and no inventory has been reserved. All pricing, tax and shipping figures shown are for demonstration purposes only and do not represent real commercial transactions.
+      </div>
+      <button class="btn btn--ghost btn--lg" id="confirmContinue">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+
+</main>
+
+<!-- ── Footer ── -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__col footer__col--brand">
+        <span class="footer__wordmark">GENZLOG</span>
+        <span class="footer__tagline">SHOP THE NEXT.</span>
+        <p class="footer__desc">
+          A premium digital destination curating precision technology, contemporary apparel and essential daily objects. Built for intentional living.
+        </p>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Disciplines</p>
+        <div class="footer__links">
+          <button class="footer__link" data-nav="discover">All Objects</button>
+          <button class="footer__link" data-nav="electronics">Electronics</button>
+          <button class="footer__link" data-nav="fashion">Fashion</button>
+          <button class="footer__link" data-nav="accessories">Accessories</button>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Care & Access</p>
+        <div class="footer__links">
+          <button class="footer__link" id="footerCart">Shopping Bag</button>
+          <button class="footer__link" id="footerWishlist">Wishlist</button>
+          <button class="footer__link" data-nav="discover">Edition 01 Catalogue</button>
+        </div>
+      </div>
+
+      <div class="footer__col">
+        <p class="footer__col-title">Identity</p>
+        <p class="footer__concept-text">
+          Strictly monochrome digital commerce. Client-side state persistence, real-time pricing computation and architectural design.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy" id="footerCopy"></p>
+      <p class="footer__copy">Frontend demonstration only — no real commercial transactions.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ── Cart Drawer ── -->
+<div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+<aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartDrawerTitle" tabindex="-1">
+  <div class="cart-drawer__header">
+    <div class="cart-drawer__title-wrap">
+      <h2 class="cart-drawer__title" id="cartDrawerTitle">Shopping Bag</h2>
+      <span class="cart-drawer__count" id="cartDrawerCount" aria-live="polite"></span>
+    </div>
+    <button class="cart-drawer__close" id="cartClose" aria-label="Close shopping bag">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+
+  <div class="cart-drawer__shipping-progress" id="shippingProgress" aria-live="polite" aria-label="Shipping progress"></div>
+
+  <div class="cart-drawer__items" id="cartItems" role="list" aria-label="Cart items"></div>
+
+  <div class="cart-drawer__footer">
+    <!-- Discount -->
+    <div class="discount-section">
+      <div id="discountInputArea">
+        <div class="discount-form">
+          <label for="discountInput" class="sr-only">Enter discount code</label>
+          <input class="discount-input" type="text" id="discountInput" placeholder="PROMO CODE" aria-label="Discount code" autocomplete="off" spellcheck="false">
+          <button class="btn btn--ghost btn--sm" id="applyDiscountBtn">Apply</button>
+        </div>
+        <p class="discount-msg" id="discountMsg" role="alert" aria-live="polite"></p>
+      </div>
+      <div id="discountAppliedArea" style="display:none">
+        <div class="discount-applied">
+          <span class="discount-applied__code" id="discountAppliedCode"></span>
+          <button class="discount-applied__remove" id="removeDiscountBtn" aria-label="Remove discount code">Remove</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order summary -->
+    <div class="order-summary" id="orderSummary" aria-label="Order total breakdown" aria-live="polite"></div>
+
+    <!-- CTAs -->
+    <div class="cart-drawer__ctas">
+      <button class="btn btn--primary btn--full" id="checkoutBtn">PROCEED TO CHECKOUT</button>
+      <button class="btn btn--ghost btn--full" id="continueShoppingBtn">CONTINUE SHOPPING</button>
+    </div>
+  </div>
+</aside>
+
+<!-- ── Wishlist Drawer ── -->
+<div class="wishlist-overlay" id="wishlistOverlay" aria-hidden="true"></div>
+<aside class="wishlist-drawer" id="wishlistDrawer" role="dialog" aria-modal="true" aria-labelledby="wishlistDrawerTitle" tabindex="-1">
+  <div class="wishlist-drawer__header">
+    <h2 class="wishlist-drawer__title" id="wishlistDrawerTitle">Wishlist</h2>
+    <button class="wishlist-drawer__close" id="wishlistClose" aria-label="Close wishlist">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+  </div>
+  <div class="wishlist-drawer__items" id="wishlistItems" role="list" aria-label="Wishlist items"></div>
+</aside>
+
+<!-- ── Quick View Modal ── -->
+<div class="modal-overlay" id="quickViewOverlay" role="dialog" aria-modal="true" aria-labelledby="quickViewTitle" tabindex="-1">
+  <div class="modal" id="quickViewModal">
+    <button class="modal__close" id="quickViewClose" aria-label="Close product view">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="modal__img-col" id="quickViewImgCol">
+      <img class="modal__img" id="quickViewImg" src="" alt="">
+    </div>
+    <div class="modal__content-col">
+      <p class="modal__category" id="quickViewCategory"></p>
+      <h2 class="modal__name" id="quickViewTitle"></h2>
+      <div class="modal__pricing">
+        <span class="modal__price" id="quickViewPrice"></span>
+        <span class="modal__original" id="quickViewOriginal"></span>
+      </div>
+      <p class="modal__desc" id="quickViewDesc"></p>
+      <p class="modal__stock" id="quickViewStock"></p>
+      <div class="modal__qty-row">
+        <span class="modal__qty-label">Quantity</span>
+        <div class="qty-control" role="group" aria-label="Quantity selector">
+          <button class="qty-control__btn" id="modalQtyDec" aria-label="Decrease quantity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+          <span class="qty-control__val" id="modalQtyVal" aria-live="polite" aria-atomic="true">1</span>
+          <button class="qty-control__btn" id="modalQtyInc" aria-label="Increase quantity">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+      <button class="btn btn--primary btn--full" id="modalAddToCartBtn">ADD TO BAG</button>
+    </div>
+  </div>
+</div>
+
+<!-- ── Toast Container ── -->
+<div class="toast-container" id="toastContainer" role="status" aria-live="polite" aria-atomic="false"></div>
+
+<!-- ── Back to Top ── -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
